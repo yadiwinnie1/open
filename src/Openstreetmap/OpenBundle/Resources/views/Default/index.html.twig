@@ -1,1 +1,196 @@
-Hello {{ name }}!
+{% extends "TwigBundle::templete.html.twig" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/style.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/style.ie7.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/style.ie6.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/acmedemo/js/script.cs') }}" />
+{% endblock %}
+
+{% block title 'Index' %}
+
+{% block body %}
+<div id="art-page-background-simple-gradient">
+        <div id="art-page-background-gradient"></div>
+    </div>
+    <div id="art-main">
+        <div class="art-sheet">
+            <div class="art-sheet-tl"></div>
+            <div class="art-sheet-tr"></div>
+            <div class="art-sheet-bl"></div>
+            <div class="art-sheet-br"></div>
+            <div class="art-sheet-tc"></div>
+            <div class="art-sheet-bc"></div>
+            <div class="art-sheet-cl"></div>
+            <div class="art-sheet-cr"></div>
+            <div class="art-sheet-cc"></div>
+            <div class="art-sheet-body">
+         <div>
+      <div>Nom d'utilisateur: <input type="Text"></div>
+      <div>Mot de passse:<input type="Text"></div>
+      <div><input type="Submit" valuer='Envoyer'></div>
+      <a href="#"><span class="l"></span><span class="r"></span><span class="t">Créer un nouveu utilisateur</span></a>
+      <a href="#"><span class="l"></span><span class="r"></span><span class="t">Mot de passe oublié</span></a>
+              
+      </div>
+
+    {% block content_header %}
+        <div class="art-header">
+                    <div class="art-header-jpeg"></div>
+                    <div class="art-logo">
+                        <h1 id="name-text" class="art-logo-name"><a href="#">OpenStreetMap</a></h1>
+                        <div id="slogan-text" class="art-logo-text">La carte coopérative libre</div>
+                    </div>
+                </div>
+                <div class="art-nav">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="art-menu">
+                		<li>
+                			<a href="#" class="active"><span class="l"></span><span class="r"></span><span class="t">Visualiser les points d'interets</span></a>
+                		</li>
+                		<li>
+                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Gerer les entrées</span></a>
+               
+                                        <ul>
+                                            <li><a href="#">Créer les points d'interets</a>
+                		
+                				</li>
+                				<li><a href="#">Créer les cordonnées GPS</a>
+                		
+                				</li>
+                				<li><a href="#">Ajouter une adresse</a></li>
+                				<li><a href="#">Ajouter une province</a></li>
+                                                <li><a href="#">Ajouter une ville</a></li>
+                                                <li><a href="#">Ajouter une categorie</a></li>
+                			</ul>
+                                        
+                		</li>		
+                		<li>
+                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Historique</span></a>
+                                       
+                		</li>
+                                <li>
+                                
+                                <a href="#"><span class="l"></span><span class="r"></span><span class="t">Blog</span></a>
+                                </li>
+                	</ul>
+                </div>
+    {% endblock %}
+
+ 
+        {% block content %}
+   <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content">
+                            <div class="art-post">
+                                <div class="art-post-body">
+                            <div class="art-post-inner art-article">
+                                            <h2 class="art-postheader">
+                                                OpenStreetMap
+                                            </h2>
+                                            <div class="art-postcontent">
+                                                <!-- article-content -->
+                                                
+                                                
+                                                <p>OpenStreetMap est une carte du monde librement modifiable, faite par des gens comme vous.
+Les données sont libres d'être téléchargées et utilisées, sous les termes d'une licence ouverte. Créez un compte d'utilisateur pour améliorer la carte.</p>
+                                                <p>
+                                                	<span class="art-button-wrapper">
+                                                		<span class="l"> </span>
+                                                		<span class="r"> </span>
+                                                		<a class="art-button" href="javascript:void(0)">Lire plus...</a>
+                                                	</span>
+                                                </p>
+                                                <div class="cleared"></div>
+                                                <div class="art-content-layout overview-table">
+                                                	<div class="art-content-layout-row">
+                                                		<div class="art-layout-cell">
+                                                      <div class="overview-table-inner">
+                                                	      <h4>Documentation</h4>
+                                                						  <img src="images/01.png" width="55px" height="55px" alt="an image" class="image" />
+                                                						  <p>Les données d’OpenStreetMap sont publiées sous la licence Open Data Commons ­– Base de données Ouverte (ODbL). </p>
+                                                       </div>
+                                                		</div><!-- end cell -->
+                                                		<div class="art-layout-cell">
+                                                    <div class="overview-table-inner">
+                                                		  <h4>Development</h4>
+                                                						  <img src="images/02.png" width="55px" height="55px" alt="an image" class="image" />
+                                                						  <p>Bienvenue sur OpenStreetMap, le projet qui crée et distribue des données géographiques libres pour le monde. Nous avons commencé parce que la plupart des cartes que vous pensez libres ont fait des restrictions légales ou techniques de leur utilisation, empêchant de les utiliser de façon créative, productive ou inattendus. </p>
+                                                				</div>
+                                                		</div><!-- end cell -->
+                                                		<div class="art-layout-cell">
+                                                    <div class="overview-table-inner">
+                                                		  <h4>La fondation</h4>
+                                                
+                                                						  <img src="images/03.png" width="55px" height="55px" alt="an image" class="image" />
+                                                						  <p>OpenStreetMap est une initiative visant à créer et fournir des données géographiques libres, telles que des cartes routières, à n'importe qui. La Fondation OpenStreetMap est une organisation internationale sans but lucratif qui soutient, mais ne contrôle pas, le projet OpenStreetMap. Il est dédié à encourager la croissance, le développement et la distribution de données géospatiales libres et de fournir des données géospatiales pour quiconque d'utiliser et de partager </p>
+                                                              </div>
+                                                		</div><!-- end cell -->
+                                                	</div><!-- end row -->
+                                                </div><!-- end table -->
+                                                    
+                                                <!-- /article-content -->
+                                            </div>
+                                            <div class="cleared"></div>
+                            </div>
+                            
+                            		<div class="cleared"><img src="images/contact.jpg" width="400px" height="265px" alt="an image" class="image" /></div>
+                                </div>
+                            </div>
+                            <div class="art-post">
+                                <div class="art-post-body">
+                            <div class="art-post-inner art-article">
+                                            <h2 class="art-postheader">
+                                                OpenStreetMap
+                                                
+                                            </h2>
+                                
+                                            <div class="art-postcontent">
+                                                <!-- article-content -->
+                                                <p>OpenStreetMap est un projet qui a pour but de constituer une base de données cartographiques libre du monde (permettant par exemple de créer des cartes sous licence libre), en utilisant le système GPS et d'autres données libres. Il a été initié en juillet 2004 par Steve Coast au University College de Londres1. Par l'utilisation de moyens informatiques basés sur Internet qui permettent l'intervention et la collaboration de tout utilisateur volontaire, OpenStreetMap relève de la géomatique 2.0 et est aussi une contribution à ce qui est appelé la néogéographie, dont les outils composent le GeoWeb.
+Début 2013, le millionième contributeur participant à la réalisation de la carte mondiale librement accessible et utilisable a été enregistré.</p>
+                                                
+                                       
+                                                <!-- /article-content -->
+                                            </div>
+                                            <div class="cleared"></div>
+                            </div>
+                            
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        {% endblock %}
+                    
+ {% block fotter %}  
+  <div class="cleared"></div><div class="art-footer">
+                    <div class="art-footer-t"></div>
+                    <div class="art-footer-l"></div>
+                    <div class="art-footer-b"></div>
+                    <div class="art-footer-r"></div>
+                    <div class="art-footer-body">
+                         <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+                        <div class="art-footer-text">
+                            <p><a href="#">Contactez-nous</a> | <a href="#">Conditions d'utilisation</a> | <a href="#">Marques</a>
+                                | <a href="#">Déclaration de confidentialité</a><br />
+                                Droit d'auteur &copy; 2013 ---. Tous droits réservés.</p>
+                        </div>
+                		<div class="cleared"></div>
+                    </div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="art-page-footer"><a href="#">Web Template</a> Crée par Yadisleyvi.</p>
+    </div>
+                       
+                    
+ {% endblock %}
+   
+{% endblock %}
